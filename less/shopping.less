@@ -1,0 +1,417 @@
+@import 'mixin.less';
+
+/*
+ ######     ###    ########  ########
+##    ##   ## ##   ##     ##    ##
+##        ##   ##  ##     ##    ##
+##       ##     ## ########     ##
+##       ######### ##   ##      ##
+##    ## ##     ## ##    ##     ##
+ ######  ##     ## ##     ##    ##
+*/
+
+.shopping {
+    @media screen and (max-width: 768px) {
+        &.container {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    @media screen and (max-width: 568px) {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 319px) {
+        max-width: 240px;
+    }
+    .aside {
+        padding-left: 0;
+        @media screen and (max-width: 1024px) {
+            padding-left: 10px;
+        }
+        @media screen and (max-width: 870px) {
+            float: none;
+            width: 100%;
+        }
+        @media screen and (max-width: 568px) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        /*
+     ##     ## ######## ##    ## ##     ##
+     ###   ### ##       ###   ## ##     ##
+     #### #### ##       ####  ## ##     ##
+     ## ### ## ######   ## ## ## ##     ##
+     ##     ## ##       ##  #### ##     ##
+     ##     ## ##       ##   ### ##     ##
+     ##     ## ######## ##    ##  #######
+*/
+        //ul
+        .product-menu {
+            p {
+                font-size: 20px;
+                line-height: 32px;
+                i {
+                    margin-right: 3px;
+                    font-size: 32px;
+                }
+            }
+            li + li {
+                border-top: 1px solid #3d1101;
+            }
+            li a {
+                color: #3d1101;
+                text-indent: 6px;
+                line-height: 32px;
+                transition: all .1s;
+                &:hover {
+                    color: #fff;
+                    background-color: #3d1101;
+                }
+            }
+            li.active a {
+                color: #fff;
+                background-color: #3d1101;
+            }
+            @media screen and (max-width: 768px) {
+                li a {
+                    font-size: 18px;
+                    line-height: 44px;
+                }
+            }
+        }
+    }
+    .main {
+        padding-right: 0;
+        @media screen and (max-width: 870px) {
+            float: none;
+            padding-right: 10px;
+            width: 100%;
+        }
+        @media screen and (max-width: 568px) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        //ul
+        .header {
+            padding-left: 0;
+            @media screen and (max-width: 870px) {
+                margin-top: 23px;
+                padding-right: 0;
+            }
+            /*
+     ######  ########    ###    ########   ######  ##     ##
+    ##    ## ##         ## ##   ##     ## ##    ## ##     ##
+    ##       ##        ##   ##  ##     ## ##       ##     ##
+     ######  ######   ##     ## ########  ##       #########
+          ## ##       ######### ##   ##   ##       ##     ##
+    ##    ## ##       ##     ## ##    ##  ##    ## ##     ##
+     ######  ######## ##     ## ##     ##  ######  ##     ##
+*/
+            .search-bar {
+                position: relative;
+                padding-left: 0;
+                padding-right: 0;
+                input {
+                    width: 100%;
+                    border: 2px solid #3d1101;
+                    background-color: #efe9e7;
+                    outline: none;
+                    line-height: 26px;
+                    text-indent: 14px;
+                    font-size: 16px;
+                }
+                a {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 36px;
+                    line-height: 32px;
+                    background-color: #3d1101;
+                    color: #fff;
+                    i {
+                        position: relative;
+                        left: 22%;
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    input {
+                        font-size: 18px;
+                        line-height: 38px;
+                    }
+                    a {
+                        width: 44px;
+                        line-height: 44px;
+                        font-size: 18px;
+                    }
+                }
+            }
+            /*
+    ########  ##     ## ########   ######  ##     ##    ###     ######  ########
+    ##     ## ##     ## ##     ## ##    ## ##     ##   ## ##   ##    ## ##
+    ##     ## ##     ## ##     ## ##       ##     ##  ##   ##  ##       ##
+    ########  ##     ## ########  ##       ######### ##     ##  ######  ######
+    ##        ##     ## ##   ##   ##       ##     ## #########       ## ##
+    ##        ##     ## ##    ##  ##    ## ##     ## ##     ## ##    ## ##
+    ##         #######  ##     ##  ######  ##     ## ##     ##  ######  ########
+*/
+            .purchase {
+                a {
+                    display: inline-block;
+                    float: right;
+                    text-align: center;
+                    color: #3d1101;
+                    i {
+                        font-size: 32px;
+                    }
+                    i:before {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+                a:last-child {
+                    font-size: 18px;
+                    line-height: 32px;
+                }
+                a + a:after {
+                    content: '│';
+                    margin-left: 12px;
+                    margin-right: 12px;
+                }
+                // a
+                #cart {
+                    position: relative;
+                    // span
+                    #cartNumber {
+                        position: absolute;
+                        top: -1px;
+                        right: -3px;
+                        z-index: 99;
+                        color: #fff;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                    // orange dot
+                    i:after {
+                        content: '';
+                        position: absolute;
+                        top: -1px;
+                        right: -7px;
+                        padding-bottom: 2px;
+                        width: 16px;
+                        height: 16px;
+                        line-height: 14px;
+                        border-radius: 50%;
+                        background-color: #ff5e45;
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    margin-top: 15px;
+                    padding-left: 0;
+                    padding-right: 0;
+                    a {
+                        &:last-child {
+                            line-height: 44px;
+                        }
+                        i {
+                            font-size: 44px;
+                        }
+                    }
+                    #cart {
+                        margin-right: 8px;
+                        // span
+                        #cartNumber {
+                            top: 1px;
+                            right: -1px;
+                        }
+                        i:after {
+                            width: 20px;
+                            height: 20px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        /*
+    ########  ########   #######  ########  ##     ##  ######  ########
+    ##     ## ##     ## ##     ## ##     ## ##     ## ##    ##    ##
+    ##     ## ##     ## ##     ## ##     ## ##     ## ##          ##
+    ########  ########  ##     ## ##     ## ##     ## ##          ##
+    ##        ##   ##   ##     ## ##     ## ##     ## ##          ##
+    ##        ##    ##  ##     ## ##     ## ##     ## ##    ##    ##
+    ##        ##     ##  #######  ########   #######   ######     ##
+*/
+        .products {
+            padding-left: 0;
+            padding-right: 0;
+            // ul
+            .product {
+                display: block;
+                float: left;
+                width: 31.33333333%;
+                margin: 30px 1%;
+                padding: 0 10px 10px 10px;
+                color: rgba(0, 0, 0, .16);
+                box-shadow: 4px 4px 6px;
+                &:first-child,
+                &:nth-child(3n+1) {
+                    margin-left: 0;
+                }
+                li {
+                    display: block;
+                }
+            }
+            .product.recommended {
+                .ribbon-mask {
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    padding-top: 40%;
+                    overflow: hidden;
+                    width: 100%;
+                }
+                .wrap {
+                    position: absolute;
+                    top: 0;
+                    right: 0%;
+                    width: 78px;
+                    height: 78px;
+                }
+                .ribbon {
+                    position: absolute;
+                    top: 0;
+                    right: -74%;
+                    display: block;
+                    width: 200px;
+                    height: 26px;
+                    background-color: #00cc99;
+                    transform: rotate(-315deg);
+                    &:before {
+                        content: '熱銷美食';
+                        position: absolute;
+                        top: 2%;
+                        right: 22%;
+                        display: block;
+                        z-index: 100;
+                        color: #fff;
+                        font-weight: 600;
+                    }
+                }
+                .shadow-top {
+                    .triangle-top(-5.8%, 87.9%, 5.6px, #078f6d);
+                }
+                .shadow-right {
+                    .triangle-right(68.4px, -6.4%, 5.6px, #078f6d);
+                }
+            }
+            .head {
+                position: relative;
+                margin: 0 -10px;
+                padding-bottom: 5%;
+                i {
+                    position: absolute;
+                    top: 9px;
+                    left: 9px;
+                    font-size: 23px;
+                    color: #fff;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .body {
+                text-align: center;
+                a {
+                    color: #3d1101;
+                }
+                h2.name {
+                    color: #3d1101;
+                    font-size: 20px;
+                    line-height: 16px;
+                }
+                .en-name {
+                    font-size: 12px;
+                    &:after {
+                        content: '';
+                        display: block;
+                        margin: 8px auto 20px auto;
+                        width: 40%;
+                        border-top: 1px solid #3d1101;
+                    }
+                }
+                div {
+                    text-align: center;
+                    font-family: 'Noto Sans CJK TC';
+                    font-size: 20px;
+                    .price {
+                        font-weight: 700;
+                        font-style: italic;
+                    }
+                }
+            }
+            .footer {
+                margin-top: 7%;
+                text-align: center;
+                // a
+                .addToCart {
+                    height: 28px;
+                    line-height: 24px;
+                    font-size: 16px;
+                    color: #ff5e45;
+                    border: 2px solid #ff5e45;
+                    &:hover {
+                        color: #fff;
+                        background-color: #ff5e45;
+                    }
+                }
+                i {
+                    margin-right: 6px;
+                }
+            }
+            @media screen and (max-width: 870px) {
+                .product:first-child,
+                .product:nth-child(3n+1) {
+                    margin-left: 1%;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .footer {
+                    margin-bottom: 6px;
+                    .addToCart {
+                        height: 44px;
+                        line-height: 44px;
+                        font-size: 18px;
+                    }
+                }
+            }
+            @media screen and (max-width: 767px) {
+                .product,
+                .product:first-child,
+                .product:nth-child(3n+1) {
+                    width: 40%;
+                    margin-left: 5%;
+                    margin-right: 5%;
+                }
+            }
+            @media screen and (max-width: 568px) {
+                .product,
+                .product:first-child,
+                .product:nth-child(3n+1) {
+                    float: none;
+                    width: 300px;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+                .product:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            @media screen and (max-width: 319px) {
+                .product {
+                    max-width: 240px;
+                }
+            }
+        }
+    }
+}

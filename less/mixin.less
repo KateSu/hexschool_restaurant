@@ -1,0 +1,42 @@
+// mixin
+.absoluteXcenter(@top) {
+    position: absolute;
+    top: @top;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.relativeXcenter(@top) {
+    position: relative;
+    top: @top;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fixedXcenter(@top, @bottom) {
+    position: fixed;
+    top: @top;
+    bottom: @bottom;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.triangle-top(@top, @right, @border-width, @color) {
+    position: absolute;
+    top: @top;
+    right: @right;
+    border-bottom: @border-width solid @color;
+    border-top: @border-width solid transparent;
+    border-right: @border-width solid transparent;
+    border-left: @border-width solid transparent;
+}
+
+.triangle-right(@top, @right, @border-width, @color) {
+    position: absolute;
+    top: @top;
+    right: @right;
+    border-left: @border-width solid @color;
+    border-top: @border-width solid transparent;
+    border-right: @border-width solid transparent;
+    border-bottom: @border-width solid transparent;
+}

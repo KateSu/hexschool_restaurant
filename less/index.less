@@ -1,0 +1,322 @@
+@import 'mixin.less';
+
+/*
+    #### ##    ## ########  ######## ##     ##
+     ##  ###   ## ##     ## ##        ##   ##
+     ##  ####  ## ##     ## ##         ## ##
+     ##  ## ## ## ##     ## ######      ###
+     ##  ##  #### ##     ## ##         ## ##
+     ##  ##   ### ##     ## ##        ##   ##
+    #### ##    ## ########  ######## ##     ##
+*/
+
+#content-index {
+    padding-top: 0;
+    padding-bottom: 0;
+    .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .today-cheif >.container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    >div:nth-child(2n-1) {
+        background-color: #efe9e7;
+    }
+    .container > .title {
+        text-align: center;
+    }
+    @media screen and (max-width: 568px) {
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    /*
+    ######## ########    ###    ######## ##     ## ########  ########  ######
+    ##       ##         ## ##      ##    ##     ## ##     ## ##       ##    ##
+    ##       ##        ##   ##     ##    ##     ## ##     ## ##       ##
+    ######   ######   ##     ##    ##    ##     ## ########  ######    ######
+    ##       ##       #########    ##    ##     ## ##   ##   ##             ##
+    ##       ##       ##     ##    ##    ##     ## ##    ##  ##       ##    ##
+    ##       ######## ##     ##    ##     #######  ##     ## ########  ######
+*/
+    .features {
+        div.title {
+            max-width: 484px;
+            margin: 0 auto;
+            hr {
+                float: left;
+                width: 118px;
+                padding-top: 31px;
+                margin: 0 12px;
+                border-top: 0;
+                border-left: 0;
+                border-bottom: 1px solid #979797;
+            }
+            h3 {
+                float: left;
+                width: 200px;
+                line-height: 32px;
+            }
+        }
+        .content {
+            li[class^='col-'] {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            li {
+                margin-top: 30px;
+            }
+            .featured,
+            .text >h4.title {
+                text-align: center;
+            }
+            .featured img {
+                border-radius: 50%;
+            }
+            .text p {
+                line-height: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) and (min-width: 569px) {
+        .features .content {
+            li {
+                margin-bottom: 16px;
+            }
+            .text h4.title {
+                margin-bottom: 20.8px;
+                text-align: left;
+            }
+        }
+    }
+    @media screen and (max-width: 568px) {
+        .features div.title {
+            max-width: 200px;
+            hr {
+                display: none;
+            }
+            h3 {
+                float: none;
+                margin: 0 auto;
+            }
+        }
+    }
+    /*
+    ########  #######  ########     ###    ##    ##          ######  ##     ## ######## #### ########
+       ##    ##     ## ##     ##   ## ##    ##  ##          ##    ## ##     ## ##        ##  ##
+       ##    ##     ## ##     ##  ##   ##    ####           ##       ##     ## ##        ##  ##
+       ##    ##     ## ##     ## ##     ##    ##    ####### ##       ######### ######    ##  ######
+       ##    ##     ## ##     ## #########    ##            ##       ##     ## ##        ##  ##
+       ##    ##     ## ##     ## ##     ##    ##            ##    ## ##     ## ##        ##  ##
+       ##     #######  ########  ##     ##    ##             ######  ##     ## ######## #### ##
+*/
+    .today-cheif {
+        background-color: #3d1101;
+        .container {
+            padding: 0 2%;
+        }
+        div[class^='col-'] {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .chief-image {
+            height: 460px;
+            background: url('../assets/main_chef_brown.png') no-repeat 50% 50%;
+            background-size: cover;
+        }
+        .intro {
+            color: #efe9e7;
+            h3.name {
+                margin-top: 6%;
+            }
+            span.en-name {
+                display: block;
+                font-size: 16px;
+            }
+            p {
+                margin-top: 16px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .today-cheif {
+            .intro {
+                padding-right: 8px;
+                h3.name {
+                    margin-top: 9%;
+                }
+                p {
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    font-size: 15px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 568px) {
+        .today-cheif {
+            .container {
+                padding-left: 0;
+                padding-right: 0;
+                .intro {
+                    padding-right: 25px;
+                    p {
+                        margin-bottom: 11%;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    /*
+    ########  ######## ##     ## #### ######## ##      ##  ######
+    ##     ## ##       ##     ##  ##  ##       ##  ##  ## ##    ##
+    ##     ## ##       ##     ##  ##  ##       ##  ##  ## ##
+    ########  ######   ##     ##  ##  ######   ##  ##  ##  ######
+    ##   ##   ##        ##   ##   ##  ##       ##  ##  ##       ##
+    ##    ##  ##         ## ##    ##  ##       ##  ##  ## ##    ##
+    ##     ## ########    ###    #### ########  ###  ###   ######
+*/
+    .reviews {
+        h3.title {
+            font-size: 24px;
+        }
+        //  ul
+        .content {
+            //  li
+            .review {
+                margin-top: 30px;
+            }
+            .customer-image {
+                padding-right: 0;
+                padding-left: 0;
+                text-align: center;
+                img {
+                    border-radius: 50%;
+                }
+            }
+            .text {
+                padding-right: 0;
+                padding-left: 0;
+                h3.name {
+                    margin: 20px 0;
+                    font-size: 20px;
+                }
+                p {
+                    margin-bottom: 16px;
+                }
+                .capacity {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) and (min-width: 569px) {
+        .reviews {
+            //  ul
+            .content {
+                padding-right: 10px;
+                padding-left: 10px;
+                //  li
+                .review {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+                .text {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 568px) {
+        .reviews {
+            .container {
+                padding-right: 4.15%;
+            }
+        }
+    }
+    @media screen and (max-width: 320px) {
+        .reviews {
+            .container {
+                padding-right: 0;
+            }
+        }
+    }
+    /*
+    ########   #######   #######  ##    ## #### ##    ##  ######
+    ##     ## ##     ## ##     ## ##   ##   ##  ###   ## ##    ##
+    ##     ## ##     ## ##     ## ##  ##    ##  ####  ## ##
+    ########  ##     ## ##     ## #####     ##  ## ## ## ##   ####
+    ##     ## ##     ## ##     ## ##  ##    ##  ##  #### ##    ##
+    ##     ## ##     ## ##     ## ##   ##   ##  ##   ### ##    ##
+    ########   #######   #######  ##    ## #### ##    ##  ######
+*/
+    .booking {
+        .container {
+            background-color: rgba(250, 250, 250, .7);
+        }
+        .content {
+            .map,
+            form {
+                margin-top: 30px;
+            }
+            .map {
+                height: 412px;
+                background: url('../assets/Map@2x.png') no-repeat 50% 50%;
+                background-size: cover;
+            }
+            form {
+                padding-left: 20px;
+                //  label
+                .radio-text {
+                    display: inline-block;
+                }
+                .btn-box {
+                    float: right;
+                    margin-top: 60px;
+                    a {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        color: #fff;
+                    }
+                    a:last-child {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .booking .content {
+            padding-left: 10px;
+            padding-right: 10px;
+            form {
+                padding-right: 0;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .booking .content {
+            form {
+                padding-left: 0;
+                .button {
+                    position: static;
+                    float: right;
+                    margin-top: 60px;
+                    text-align: center;
+                    a {
+                        width: 84px;
+                    }
+                    a:last-child {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

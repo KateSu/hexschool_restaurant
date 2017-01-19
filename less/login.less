@@ -1,0 +1,81 @@
+@import 'mixin.less';
+
+/*
+    ##        #######   ######   #### ##    ##
+    ##       ##     ## ##    ##   ##  ###   ##
+    ##       ##     ## ##         ##  ####  ##
+    ##       ##     ## ##   ####  ##  ## ## ##
+    ##       ##     ## ##    ##   ##  ##  ####
+    ##       ##     ## ##    ##   ##  ##   ###
+    ########  #######   ######   #### ##    ##
+*/
+
+.login {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    .title {
+        text-align: center;
+        p {
+            font-size: 20px;
+            font-family: 'Noto Sans CJK TC', NotoSansCJKtc;
+            font-weight: 500;
+        }
+    }
+    .content .form {
+        margin-top: 35px;
+        padding: 16px;
+        color: rgba(0, 0, 0, .16);
+        box-shadow: 4px 4px 6px;
+        border-top: 4px solid #ff5e45;
+        p,
+        label {
+            color: #3d1101;
+            text-transform: uppercase
+        }
+        p {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-family: 'Noto Sans CJK TC', NotoSansCJKtc;
+            font-weight: 800;
+            text-align: center;
+        }
+        label {
+            text-transform: capitalize;
+        }
+        input {
+            font-family: fontello;
+            font-style: normal;
+            font-weight: normal;
+        }
+        #password {
+            margin-bottom: 1px;
+        }
+        //  a
+        .forget {
+            color: #ff5e45;
+            font-size: 14px;
+        }
+        .btn-box {
+            width: 100%;
+            a {
+                width: 45%;
+                color: #fff;
+                &:first-child {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .login {
+        width: 240px;
+        .content .form {
+            .btn-box a:first-child {
+                margin-right: 16px;
+            }
+        }
+    }
+}

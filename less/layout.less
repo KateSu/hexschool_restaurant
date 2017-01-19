@@ -1,0 +1,467 @@
+@import 'mixin.less';
+
+/*
+     ######  ##     ##  ######  ########  #######  ##     ##
+    ##    ## ##     ## ##    ##    ##    ##     ## ###   ###
+    ##       ##     ## ##          ##    ##     ## #### ####
+    ##       ##     ##  ######     ##    ##     ## ## ### ##
+    ##       ##     ##       ##    ##    ##     ## ##     ##
+    ##    ## ##     ## ##    ##    ##    ##     ## ##     ##
+     ######   #######   ######     ##     #######  ##     ##
+
+
+     ######  ##          ###     ######   ######
+    ##    ## ##         ## ##   ##    ## ##    ##
+    ##       ##        ##   ##  ##       ##
+    ##       ##       ##     ##  ######   ######
+    ##       ##       #########       ##       ##
+    ##    ## ##       ##     ## ##    ## ##    ##
+     ######  ######## ##     ##  ######   ######
+*/
+
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.form {
+    input[type='text'],
+    input[type='tel'],
+    input[type='email'],
+    input[type='number'],
+    input[type='password'] {
+        margin-bottom: 12px;
+        padding-left: 0;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        width: 100%;
+        text-indent: 14px;
+        font-size: 16px;
+        color: #4a4a4a;
+    }
+    input[type='radio'] {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        input[type='text'],
+        input[type='tel'],
+        input[type='email'],
+        input[type='number'],
+        input[type='password'] {
+            height: 45px;
+            font-size: 18px;
+        }
+    }
+}
+
+.btn-box {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    border-radius: 3px;
+    transition: all .3s;
+    &.btn-reset,
+    &.btn-register {
+        background-color: rgba(0, 0, 0, .35);
+        &:hover,
+        &:active {
+            background-color: rgba(0, 0, 0, .5);
+        }
+    }
+    &.btn-submit {
+        background-color: #f56c23;
+        &:hover,
+        &:active {
+            background-color: desaturate(hsl(21%, 91%, 55%), 20%);
+        }
+    }
+    &.btn-fluid {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .btn {
+        height: 44px;
+        line-height: 44px;
+        font-size: 16px;
+    }
+}
+
+header,
+div[id^='content-'],
+footer {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    header,
+    div[id^='content-'],
+    footer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+div[id^='content-'] {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #efe9e7;
+}
+
+
+/*
+    ########  ########     ###    ########  #### ##    ##  ######
+    ##     ## ##     ##   ## ##   ##     ##  ##  ###   ## ##    ##
+    ##     ## ##     ##  ##   ##  ##     ##  ##  ####  ## ##
+    ########  ########  ##     ## ##     ##  ##  ## ## ## ##   ####
+    ##     ## ##   ##   ######### ##     ##  ##  ##  #### ##    ##
+    ##     ## ##    ##  ##     ## ##     ##  ##  ##   ### ##    ##
+    ########  ##     ## ##     ## ########  #### ##    ##  ######
+
+
+    ########     ###    ########
+    ##     ##   ## ##   ##     ##
+    ##     ##  ##   ##  ##     ##
+    ########  ##     ## ########
+    ##     ## ######### ##   ##
+    ##     ## ##     ## ##    ##
+    ########  ##     ## ##     ##
+*/
+
+.brading-bar {
+    background-color: #000;
+    z-index: 100;
+    .logo {
+        float: left;
+        img {
+            padding: 16px 13px;
+        }
+    }
+    .menu {
+        float: right;
+        li {
+            float: left;
+            width: 20%;
+            position: relative;
+        }
+        li a {
+            padding-right: 16px;
+            padding-left: 16px;
+            color: #fff;
+            line-height: 58px;
+        }
+        li.active:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 50px;
+            left: 7px;
+            width: 50px;
+            height: 3px;
+            background-color: #f7c114;
+        }
+    }
+}
+
+.show-menu {
+    .brading-bar {
+        height: 96px;
+        transition: height .7s;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .brading-bar {
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        transition: height 1s;
+        .logo img {
+            padding-bottom: 0;
+        }
+        .menu {
+            position: absolute;
+            top: 52px;
+            left: 0;
+            right: 0;
+            li {
+                width: 25%;
+                text-align: center;
+            }
+            li.menu-login {
+                display: none;
+            }
+            li a {
+                line-height: 44px;
+                &:hover {
+                    background-color: #583822;
+                }
+            }
+            li.active:before {
+                display: none;
+            }
+        }
+        .mobile-only {
+            display: block;
+            float: right;
+            a {
+                padding-left: 8px;
+                padding-right: 8px;
+                line-height: 52px;
+                color: #fff;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+
+/*
+    ########     ###    ##    ## ##    ## ######## ########
+    ##     ##   ## ##   ###   ## ###   ## ##       ##     ##
+    ##     ##  ##   ##  ####  ## ####  ## ##       ##     ##
+    ########  ##     ## ## ## ## ## ## ## ######   ########
+    ##     ## ######### ##  #### ##  #### ##       ##   ##
+    ##     ## ##     ## ##   ### ##   ### ##       ##    ##
+    ########  ##     ## ##    ## ##    ## ######## ##     ##
+*/
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 364px;
+    background: url('../assets/header_desktop.png') no-repeat 50% 50%;
+    background-size: cover;
+    .promotion {
+        .absoluteXcenter(20%);
+        padding-top: 20px;
+        width: 460px;
+        height: 152px;
+        background: rgba(0, 0, 0, 0.35);
+        color: #fff;
+        text-align: center;
+        p:first-child {
+            line-height: 16px;
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner .promotion {
+        .absoluteXcenter(25%);
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .banner {
+        background: url('../assets/header_mobile.png') no-repeat 50% 50%;
+        .promotion {
+            max-width: 300px;
+            height: auto;
+            p:first-child {
+                line-height: 48px;
+            }
+            p:last-child {
+                padding-bottom: 20px;
+            }
+            .mobile-only {
+                display: inline;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .banner .promotion {
+        max-width: 240px;
+        p:first-child {
+            font-size: 28px;
+            line-height: 40px;
+        }
+    }
+}
+
+
+/*
+    ########  #######   #######  ######## ######## ########
+    ##       ##     ## ##     ##    ##    ##       ##     ##
+    ##       ##     ## ##     ##    ##    ##       ##     ##
+    ######   ##     ## ##     ##    ##    ######   ########
+    ##       ##     ## ##     ##    ##    ##       ##   ##
+    ##       ##     ## ##     ##    ##    ##       ##    ##
+    ##        #######   #######     ##    ######## ##     ##
+*/
+
+footer {
+    .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #efe9e7;
+    }
+    h2.title {
+        font-weight: 600;
+    }
+    p {
+        margin-top: 16px;
+    }
+    ul {
+        margin-top: 30px;
+    }
+    .mobile-only {
+        display: inline;
+    }
+    //  ul
+    .contact {
+        li:nth-child(2) {
+            margin-top: 16px;
+        }
+        li a {
+            color: #3d1101;
+        }
+        li + li a:before {
+            content: '•';
+        }
+    }
+    .branding-box {
+        margin-top: 30px;
+        text-align: right;
+        li {
+            display: inline-block;
+        }
+        a {
+            font-size: 36px;
+            &.logo {
+                display: block;
+            }
+        }
+        //  ul
+        .social-media {
+            .gplus {
+                color: #db4437;
+            }
+            .twitter {
+                color: #41abe1;
+            }
+            .facebook {
+                color: #3a5795;
+                i:before {
+                    margin-right: 0;
+                }
+            }
+            a i:before {
+                margin-right: 6px;
+                margin-left: 6px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .branding-box .social-media {
+        a i {
+            font-size: 42px;
+        }
+    }
+}
+
+@media screen and (max-width: 610px) and (min-width: 569px) {
+    footer {
+        .mobile-only {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 568px) {
+    footer {
+        .container {
+            padding-bottom: 40px;
+        }
+        .branding-box {
+            margin-top: 10px;
+            a.logo {
+                display: none;
+            }
+            //  ul
+            .social-media {
+                margin-top: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    footer {
+        //  ul
+        .about,
+        .contact {
+            float: none;
+            width: 100%;
+        }
+        .branding-box {
+            //  ul
+            .social-media {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+
+/*
+     ######    #######          ########  #######  ########
+    ##    ##  ##     ##            ##    ##     ## ##     ##
+    ##        ##     ##            ##    ##     ## ##     ##
+    ##   #### ##     ## #######    ##    ##     ## ########
+    ##    ##  ##     ##            ##    ##     ## ##
+    ##    ##  ##     ##            ##    ##     ## ##
+     ######    #######             ##     #######  ##
+*/
+
+.go-top {
+    .fixedXcenter(null,
+    0px);
+    width: 55px;
+    height: 44px;
+    background-color: rgba(0, 0, 0, .6);
+    color: #fff;
+    font-size: 28px;
+    &:hover,
+    &:active {
+        background-color: rgba(0, 0, 0, .8)
+    }
+    i {
+        .absoluteXcenter(7%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .go-top {
+        right: 25px;
+        width: 50px;
+        height: 44px;
+        font-size: 24px;
+    }
+}

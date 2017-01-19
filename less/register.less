@@ -1,0 +1,116 @@
+@import 'mixin.less';
+
+/*
+    ########  ########  ######   ####  ######  ######## ######## ########
+    ##     ## ##       ##    ##   ##  ##    ##    ##    ##       ##     ##
+    ##     ## ##       ##         ##  ##          ##    ##       ##     ##
+    ########  ######   ##   ####  ##   ######     ##    ######   ########
+    ##   ##   ##       ##    ##   ##        ##    ##    ##       ##   ##
+    ##    ##  ##       ##    ##   ##  ##    ##    ##    ##       ##    ##
+    ##     ## ########  ######   ####  ######     ##    ######## ##     ##
+*/
+
+.register {
+    width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    >.title {
+        text-align: center;
+        p {
+            font-size: 20px;
+            font-family: 'Noto Sans CJK TC', NotoSansCJKtc;
+            font-weight: 500;
+        }
+    }
+    >.content {
+        margin-top: 35px;
+        padding: 1rem;
+        color: rgba(0, 0, 0, .16);
+        box-shadow: 4px 4px 6px;
+        border-top: 4px solid #ff5e45;
+        p,
+        label {
+            color: #3d1101;
+        }
+        >p.title {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-family: 'Noto Sans CJK TC', NotoSansCJKtc;
+            font-weight: 800;
+            text-align: center;
+        }
+        .btn-box a {
+            float: right;
+            width: 125px;
+            color: #fff;
+        }
+        .form {
+            float: right;
+            padding-right: 0;
+            label {
+                text-transform: capitalize;
+            }
+            input {
+                font-family: fontello;
+                font-style: normal;
+                font-weight: normal;
+            }
+            .password-again {
+                margin-bottom: 1px;
+            }
+            //  a
+            .login-btn {
+                color: #ff5e45;
+                font-size: 14px;
+            }
+        }
+        .agreement {
+            float: right;
+            padding-left: 0;
+            .title {
+                margin-bottom: 4px;
+                font-size: 18px;
+            }
+            .content {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .register {
+        max-width: 520px;
+        .content {
+            .form {
+                padding-left: 0;
+                .btn-box {
+                    display: none;
+                }
+            }
+            .agreement {
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding-right: 0;
+                max-height: 200px;
+                overflow: auto;
+            }
+            .btn-box.mobile-only {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .register {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .register {
+        max-width: 240px;
+    }
+}
